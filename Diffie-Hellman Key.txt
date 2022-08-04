@@ -1,0 +1,29 @@
+import java.util.*;
+import javax.crypto.*;
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args)throws Exception {
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("q is:");
+		int q=sc.nextInt();
+		System.out.println("alpha is:");
+		int alpha=sc.nextInt();
+		System.out.println("xa is:");
+		int xa=sc.nextInt();
+		System.out.println("xb is:");
+		int xb=sc.nextInt();
+		int ya=(int)(Math.pow(alpha,xa)%q);
+		int yb=(int)(Math.pow(alpha,xb)%q);
+		int ka=(int)(Math.pow(yb,xa%q));
+		int kb=(int)(Math.pow(ya,xb%q));
+		System.out.println("ya is:"+ya);
+		System.out.println("yb is:"+yb);
+		System.out.println("ka is:"+ka);
+		System.out.println("kb is:"+kb);
+		if(ka==kb)
+		    System.out.println("They are communacative");
+		else
+		System.out.println("Not communacative");
+	}
+}
